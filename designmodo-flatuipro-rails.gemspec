@@ -2,7 +2,7 @@
 # stub: designmodo-flatuipro-rails 1.2.5.0.branch ruby lib
 
 Gem::Specification.new do |s|
-  s.name = "designmodo-flatuipro-rails"
+  s.name = "flatui-free-rails"
   s.version = "1.2.5.0.branch"
 
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
