@@ -1,29 +1,38 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'designmodo/flatuipro/rails/version'
+# -*- encoding: utf-8 -*-
+# stub: designmodo-flatuipro-rails 1.2.5.0.branch ruby lib
 
-Gem::Specification.new do |spec|
-  spec.name          = "designmodo-flatuipro-rails"
-  spec.version       = Designmodo::Flatuipro::Rails::VERSION
-  spec.authors       = ["Samuel Chou"]
-  spec.email         = ["sam.chou@windystudios.com"]
-  spec.description   = %q{designmodo-flatuipro-rails integrates Flat UI Pro for Rails 3 and 4 Asset Pipelines}
-  spec.summary       = %q{Flat UI Pro for Rails 3 and 4 Asset Pipelines}
-  spec.homepage      = "https://github.com/reflection/designmodo-flatuipro-rails"
-  spec.license       = "Simplified BSD"
+Gem::Specification.new do |s|
+  s.name = "designmodo-flatuipro-rails"
+  s.version = "1.2.5.0.branch"
 
-  spec.files         = Dir["lib/**/*"] + ["LICENSE.txt", "Rakefile", "README.md"]
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+  s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
+  s.require_paths = ["lib"]
+  s.authors = ["Samuel Chou"]
+  s.date = "2014-09-03"
+  s.description = "designmodo-flatuipro-rails integrates Flat UI Pro for Rails 3 and 4 Asset Pipelines"
+  s.email = ["sam.chou@windystudios.com"]
+  s.files = ["LICENSE.txt", "README.md", "Rakefile", "lib/designmodo", "lib/designmodo/flatuipro", "lib/designmodo/flatuipro/rails", "lib/designmodo/flatuipro/rails.rb", "lib/designmodo/flatuipro/rails/version.rb", "lib/generators", "lib/generators/flatuipro", "lib/generators/flatuipro/demo", "lib/generators/flatuipro/demo/demo_generator.rb", "lib/generators/flatuipro/install", "lib/generators/flatuipro/install/install_generator.rb", "lib/generators/flatuipro/install/templates", "lib/generators/flatuipro/install/templates/application.css", "lib/generators/flatuipro/install/templates/application.js", "lib/generators/flatuipro/install/templates/flatuipro.js", "lib/generators/flatuipro/install/templates/flatuipro.less"]
+  s.homepage = "https://github.com/reflection/designmodo-flatuipro-rails"
+  s.licenses = ["Simplified BSD"]
+  s.post_install_message = "**********************************************\n\nOne *must* run `rails generate flatuipro:install <Flat UI Pro Directory>`\nwhen gem updated\n\n**********************************************"
+  s.rubygems_version = "2.2.2"
+  s.summary = "Flat UI Pro for Rails 3 and 4 Asset Pipelines"
 
-  spec.add_dependency 'less-rails-bootstrap'
-  spec.add_dependency 'jquery-rails',            '>= 2.2.1'
-  spec.add_dependency 'jquery-ui-rails',         '>= 4.0.3'
-  spec.post_install_message = "" \
-  "**********************************************\n\n" \
-  "One *must* run `rails generate flatuipro:install <Flat UI Pro Directory>`\n" \
-  "when gem updated\n\n" \
-  "**********************************************"
+  if s.respond_to? :specification_version then
+    s.specification_version = 4
+
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<less-rails-bootstrap>, [">= 0"])
+      s.add_runtime_dependency(%q<jquery-rails>, [">= 2.2.1"])
+      s.add_runtime_dependency(%q<jquery-ui-rails>, [">= 4.0.3"])
+    else
+      s.add_dependency(%q<less-rails-bootstrap>, [">= 0"])
+      s.add_dependency(%q<jquery-rails>, [">= 2.2.1"])
+      s.add_dependency(%q<jquery-ui-rails>, [">= 4.0.3"])
+    end
+  else
+    s.add_dependency(%q<less-rails-bootstrap>, [">= 0"])
+    s.add_dependency(%q<jquery-rails>, [">= 2.2.1"])
+    s.add_dependency(%q<jquery-ui-rails>, [">= 4.0.3"])
+  end
 end
